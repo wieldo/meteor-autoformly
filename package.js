@@ -40,6 +40,7 @@ Package.onUse(function (api) {
 
     api.addFiles([
         'lib/client/main.js',
+        'lib/client/auto-formly-helpers.js',
         'lib/client/auto-formly-parsers.js',
         'lib/client/auto-formly.js',
         // parsers
