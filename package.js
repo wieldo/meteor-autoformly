@@ -23,7 +23,7 @@ Package.onUse(function (api) {
             'angular:angular@1.4.7',
             'pbastowski:angular-babel@1.0.2',
             'pbastowski:angular2-now@0.3.13',
-            'wieldo:angular-formly-validator'
+            'wieldo:angular-formly-validator@1.0.0'
         ],
         imply: [
             'wieldo:angular-formly-validator',
@@ -46,7 +46,11 @@ Package.onUse(function (api) {
         // parsers
         'lib/client/parsers/key.js',
         'lib/client/parsers/type.js',
-        'lib/client/parsers/templateoptions-label.js'
+        'lib/client/parsers/templateoptions-label.js',
+        // validators
+        'lib/client/parsers/validators/required.js',
+        'lib/client/parsers/validators/minlength.js',
+        'lib/client/parsers/validators/maxlength.js'
     ], client);
 
     api.addFiles([
