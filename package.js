@@ -50,11 +50,32 @@ Package.onUse(function (api) {
         // validators
         'lib/client/parsers/validators/required.js',
         'lib/client/parsers/validators/minlength.js',
-        'lib/client/parsers/validators/maxlength.js'
+        'lib/client/parsers/validators/maxlength.js',
+        'lib/client/parsers/validators/minnumber.js',
+        'lib/client/parsers/validators/maxnumber.js'
     ], client);
 
     api.addFiles([
         'lib/schema.js'
     ], both);
+    
+});
 
+Package.onTest(function(api) {
+    api.use([
+        'pbastowski:angular-babel@1.0.2',
+        'pbastowski:angular2-now@0.3.13',
+        'underscore@1.0.4',
+        'sanjo:jasmine@0.20.2',
+        'velocity:helpers',
+        'velocity:console-reporter',
+        'angular:angular-mocks@1.4.7',
+        'wieldo:autoformly'
+    ]);
+
+    api.addFiles([
+        'tests/client/schema.js',
+        'tests/client/auto-formly-parsers-spec.js',
+        'tests/client/auto-formly-spec.js'
+    ], client);
 });
