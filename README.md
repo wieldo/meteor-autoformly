@@ -7,6 +7,12 @@ AutoFormly
 
 Create [Angular-Formly] forms with automatic insert and update, and automatic reactive validation. Requires [SimpleSchema] or [Collection2].
 
+## Installation
+
+```
+meteor add wieldo:autoformly
+```
+
 ## How to use it
 
 ```javascript
