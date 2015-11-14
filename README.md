@@ -3,7 +3,7 @@ AutoFormly
 
 [![Build Status](https://travis-ci.org/wieldo/meteor-autoformly.svg)](https://travis-ci.org/wieldo/meteor-autoformly) 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/wieldo/meteor-autoformly?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Coverage Status](https://coveralls.io/repos/wieldo/angular-formly/badge.svg?branch=master&service=github)](https://coveralls.io/github/wieldo/angular-formly?branch=master)
+[![Coverage Status](https://coveralls.io/repos/wieldo/meteor-autoformly/badge.svg?branch=master&service=github)](https://coveralls.io/github/wieldo/meteor-autoformly?branch=master)
 
 Create [Angular-Formly] forms with automatic insert and update, and automatic reactive validation. Requires [SimpleSchema] or [Collection2].
 
