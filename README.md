@@ -21,7 +21,7 @@ Take a look at this docs:
 - [autoFormly]
 - [autoFormlyParsers]
 
-## Contribution
+## Contributing
 It is a new project, at the beginning of development process.
 
 Feel free to ask me anything.
@@ -47,6 +47,26 @@ We're currently working on three other packages that are very useful in autoForm
 - [formlyTransformer] to simplify process of formly field transformation.
 - [formlyValidator] to make validation easier (with built-in validators)
 - [formlyMaterial] is a AngularJS module with Angular Material templates to use in angular-formly.
+
+### Roadmap 1.0
+
+- [x] Extend SimpleSchema to use `autoformly` property
+- [ ] Support for **_array of objects_**
+- [x] `schema.key` as `formly.key`
+- [x] `schema.label` as `formly.templateOptions.label`
+- [x] `schema.optional` and required validator
+- [x] `schema.max` for **_String_** and **_Number_** types as **maxlength** and **maxnumber** validator
+- [x] `schema.min` for **_String_** and **_Number_** types as **minlength** and **minnumber** validator
+- [ ] `schema.regEx` as **pattern** validator
+- [ ] `schema.defaultValue` as `model`
+- [ ] `schema.autoformly.rows` to be displayed textarea
+- [ ] **_Boolean_** type as checkbox
+- [ ] `schema.autoformly.type` to be `formly.type`
+- [ ] `schema.allowedValues` as select element
+- [ ] `schema.minCount` support
+- [ ] `schema.maxCount` support
+- [ ] Support for **_Object_** type fields
+- [ ] Support for server-side validation errors (like _unique_)
 
 ## Contact
 You can find me on [Gitter].
