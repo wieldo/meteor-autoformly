@@ -11,7 +11,6 @@ const fields = autoFormly.schema(BooksSchema);
 ```
 
 ## What is ready?
-
 Take a look at this docs:
 
 - [autoFormly]
@@ -20,9 +19,29 @@ Take a look at this docs:
 ## Contribution
 It is a new project, at the beginning of development process.
 
+Feel free to ask me anything.
+
+### You can help
 If you would like to add functionality, just fork this repo and create pull request.
 
-Feel free to ask me anything.
+### How autoFormly works
+Basically it parses simpleSchema structure and creates formly configuration for each field.
+
+For example, to mark field as required we can create the parser function to check if `optional` property is being used.
+If _opional_ is not set to _true_ then we're adding `required` validator from `wieldo:angular-formly-validator` package 
+(see [formlyValidator] and source code in [required.js](lib/client/parsers/validators/required.js).
+
+#### What is parser?
+Parser is a function that receives simpleSchema key with configuration and reference to formly field configuration object.
+
+So basically, you can add properties to formly configuration by checking field's schema.
+
+#### Helpers
+We're currently working on three other packages that are very useful in autoFormly.
+
+- [formlyTransformer] to simplify process of formly field transformation.
+- [formlyValidator] to make validation easier (with built-in validators)
+- [formlyMaterial] is a AngularJS module with Angular Material templates to use in angular-formly.
 
 ## Contact
 You can find me on [Gitter].
@@ -36,3 +55,7 @@ You can find me on [Gitter].
 
 [autoFormly]: docs/auto-formly.md
 [autoFormlyParsers]: docs/auto-formly-parsers.md
+
+[formlyValidator]: http://github.com/wieldo/angular-formly-validator
+[formlyTransformer]: http://github.com/wieldo/angular-formly-transformer
+[formlyMaterial]: http://github.com/wieldo/angular-formly-templates-material
