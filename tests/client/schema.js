@@ -1,4 +1,4 @@
-let userProfile = new SimpleSchema({
+const userProfile = new SimpleSchema({
     firstname: {
         type: String,
         min: 3,
@@ -27,7 +27,7 @@ let userProfile = new SimpleSchema({
     }
 });
 
-let userLinkedServices = new SimpleSchema({
+const userLinkedServices = new SimpleSchema({
     facebook: {
         type: Boolean,
         defaultValue: false
@@ -48,9 +48,6 @@ let userLinkedServices = new SimpleSchema({
 UserSchema = new SimpleSchema({
     username: {
         type: String,
-        // For accounts-password, either emails or username is required, but not both. It is OK to make this
-        // optional here because the accounts-password package does its own validation.
-        // Third-party login packages may not require either. Adjust this schema as necessary for your usage.
         optional: true
     },
     registered_emails: {
@@ -60,9 +57,6 @@ UserSchema = new SimpleSchema({
     },
     emails: {
         type: Array,
-        // For accounts-password, either emails or username is required, but not both. It is OK to make this
-        // optional here because the accounts-password package does its own validation.
-        // Third-party login packages may not require either. Adjust this schema as necessary for your usage.
         optional: true
     },
     "emails.$": {
@@ -90,9 +84,5 @@ UserSchema = new SimpleSchema({
         type: Object,
         optional: true,
         blackbox: true
-    },
-    isAdmin: {
-        type: Boolean,
-        optional: true
     }
 });

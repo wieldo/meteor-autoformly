@@ -70,6 +70,7 @@ Package.onTest(function(api) {
         'velocity:helpers',
         'velocity:console-reporter',
         'angular:angular-mocks@1.4.7',
+        'aldeed:simple-schema@1.1.0',
         'wieldo:autoformly'
     ]);
 
