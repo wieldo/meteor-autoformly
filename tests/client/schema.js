@@ -73,8 +73,7 @@ UserSchema = new SimpleSchema({
         type: Date
     },
     profile: {
-        type: userProfile,
-        optional: true
+        type: userProfile
     },
     linkedServices: {
         type: userLinkedServices

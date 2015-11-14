@@ -26,9 +26,9 @@ Package.onUse(function (api) {
             'wieldo:angular-formly-validator@1.0.0'
         ],
         imply: [
-            'wieldo:angular-formly-validator',
             'aldeed:simple-schema',
-            'aldeed:collection2'
+            'aldeed:collection2',
+            'wieldo:angular-formly-validator'
         ]
     };
 
@@ -74,9 +74,12 @@ Package.onTest(function(api) {
         'aldeed:simple-schema@1.1.0',
         'wieldo:autoformly'
     ]);
+    
+    api.addFiles([
+        'tests/client/schema.js'
+    ], both);
 
     api.addFiles([
-        'tests/client/schema.js',
         'tests/client/auto-formly-parsers-spec.js',
         'tests/client/auto-formly-spec.js',
         // parsers
