@@ -9,7 +9,7 @@ __File: [lib/client/auto-formly.js](../lib/client/auto-formly.js)__
 
 -
 
-### <a name="autoFormly.collection"></a>*autoFormly*.collection(collection, fields)
+### *autoFormly*.collection(collection, fields)
 
 ```
 Parse Mongo.Collection to get array with fields
@@ -31,7 +31,7 @@ __Returns__  *{Array}*
  
 -
 
-### <a name="autoFormly.schema"></a>*autoFormly*.schema(schema, fields)
+### *autoFormly*.schema(schema, fields)
 
 ```
 Parse SimpleSchema object to get array with fields
@@ -54,7 +54,7 @@ __Returns__  *{Array}*
   
 -
 
-### <a name="autoFormly.schema"></a>*autoFormly*.schema(schema, fields)
+### *autoFormly*.schema(schema, fields)
 
 ```
 Parse SimpleSchema object to get array with fields

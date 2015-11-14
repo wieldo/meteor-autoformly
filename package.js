@@ -52,7 +52,8 @@ Package.onUse(function (api) {
         'lib/client/parsers/validators/minlength.js',
         'lib/client/parsers/validators/maxlength.js',
         'lib/client/parsers/validators/minnumber.js',
-        'lib/client/parsers/validators/maxnumber.js'
+        'lib/client/parsers/validators/maxnumber.js',
+        'lib/client/parsers/validators/pattern.js'
     ], client);
 
     api.addFiles([
@@ -77,6 +78,17 @@ Package.onTest(function(api) {
     api.addFiles([
         'tests/client/schema.js',
         'tests/client/auto-formly-parsers-spec.js',
-        'tests/client/auto-formly-spec.js'
+        'tests/client/auto-formly-spec.js',
+        // parsers
+        'tests/client/parsers/key-spec.js',
+        'tests/client/parsers/templateoptions-label-spec.js',
+        'tests/client/parsers/type-spec.js',
+        // parsers validators
+        'tests/client/parsers/validators/required-spec.js',
+        'tests/client/parsers/validators/pattern-spec.js',
+        'tests/client/parsers/validators/minnumber-spec.js',
+        'tests/client/parsers/validators/maxnumber-spec.js',
+        'tests/client/parsers/validators/minlength-spec.js',
+        'tests/client/parsers/validators/maxlength-spec.js'
     ], client);
 });
