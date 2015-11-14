@@ -10,6 +10,13 @@ const fields = autoFormly.collection(BooksCollection);
 const fields = autoFormly.schema(BooksSchema);
 ```
 
+## What is ready?
+
+Take a look at this docs:
+
+- [autoFormly]
+- [autoFormlyParsers]
+
 ## Contribution
 It is a new project, at the beginning of development process.
 
@@ -26,3 +33,6 @@ You can find me on [Gitter].
 [Collection2]: http://github.com/aldeed/meteor-collection2
 [AutoForm]: http://github.com/aldeed/meteor-autoform
 [Gitter]: https://gitter.im/wieldo/meteor-autoformly
+
+[autoFormly]: docs/auto-formly.md
+[autoFormlyParsers]: docs/auto-formly-parsers.md
