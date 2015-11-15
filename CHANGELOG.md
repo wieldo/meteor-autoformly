@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Support for default values
 - Support for schema.autoformly.type
+- Support for schema.regEx
+- Tests for all parsers
 
 ## 0.0.1
 
