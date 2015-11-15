@@ -75,6 +75,7 @@ We're currently working on three other packages that are very useful in autoForm
 - [ ] `schema.maxCount` support
 - [ ] Support for **_Object_** type fields
 - [ ] Support for server-side validation errors (like _unique_)
+- [ ] Interactive **demo**
 
 ## Contact
 You can find me on [Gitter].
