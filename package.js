@@ -26,6 +26,8 @@ Package.onUse(function (api) {
             'wieldo:angular-formly-validator@1.0.0'
         ],
         imply: [
+            'pbastowski:angular-babel',
+            'pbastowski:angular2-now',
             'aldeed:simple-schema',
             'aldeed:collection2',
             'wieldo:angular-formly-validator'
@@ -64,14 +66,10 @@ Package.onUse(function (api) {
 
 Package.onTest(function(api) {
     api.use([
-        'pbastowski:angular-babel@1.0.2',
-        'pbastowski:angular2-now@0.3.13',
-        'underscore@1.0.4',
         'sanjo:jasmine@0.20.2',
         'velocity:helpers',
         'velocity:console-reporter',
         'angular:angular-mocks@1.4.7',
-        'aldeed:simple-schema@1.1.0',
         'wieldo:autoformly'
     ]);
     
