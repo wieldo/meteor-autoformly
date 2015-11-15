@@ -66,7 +66,7 @@ We're currently working on three other packages that are very useful in autoForm
 - [x] `schema.max` for **_String_** and **_Number_** types as **maxlength** and **maxnumber** validator
 - [x] `schema.min` for **_String_** and **_Number_** types as **minlength** and **minnumber** validator
 - [x] `schema.regEx` as **pattern** validator
-- [ ] `schema.defaultValue` as `model`
+- [x] `schema.defaultValue` as `formly.defaultValue`
 - [ ] `schema.autoformly.rows` to be displayed textarea
 - [ ] **_Boolean_** type as checkbox
 - [ ] `schema.autoformly.type` to be `formly.type`
