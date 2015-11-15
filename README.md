@@ -69,7 +69,7 @@ We're currently working on three other packages that are very useful in autoForm
 - [x] `schema.defaultValue` as `formly.defaultValue`
 - [ ] `schema.autoformly.rows` to be displayed textarea
 - [ ] **_Boolean_** type as checkbox
-- [ ] `schema.autoformly.type` to be `formly.type`
+- [x] `schema.autoformly.type` to be `formly.type`
 - [ ] `schema.allowedValues` as select element
 - [ ] `schema.minCount` support
 - [ ] `schema.maxCount` support

@@ -37,7 +37,7 @@ describe("autoFormlyParsers type", () => {
         const field = autoFormlyParser.field("test", {
             type: Array
         });
-        
+
         expect(field.type).toBeUndefined();
     });
 
@@ -47,5 +47,16 @@ describe("autoFormlyParsers type", () => {
         });
 
         expect(field.type).toBeUndefined();
+    });
+
+    it('should set field type if schema.autoformly.type is defined', () => {
+        const field = autoFormlyParser.field("test", {
+            type: Object,
+            autoformly: {
+                type: "input"
+            }
+        });
+
+        expect(field.type).toBe("input");
     });
 });

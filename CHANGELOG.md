@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - Support for default values
+- Support for schema.autoformly.type
 
 ## 0.0.1
 
