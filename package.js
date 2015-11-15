@@ -48,6 +48,7 @@ Package.onUse(function (api) {
         'lib/client/parsers/key.js',
         'lib/client/parsers/type.js',
         'lib/client/parsers/templateoptions-label.js',
+        'lib/client/parsers/defaultvalue.js',
         // validators
         'lib/client/parsers/validators/required.js',
         'lib/client/parsers/validators/minlength.js',
@@ -83,6 +84,7 @@ Package.onTest(function(api) {
         'tests/client/parsers/key-spec.js',
         'tests/client/parsers/templateoptions-label-spec.js',
         'tests/client/parsers/type-spec.js',
+        'tests/client/parsers/defaultvalue-spec.js',
         // parsers validators
         'tests/client/parsers/validators/required-spec.js',
         'tests/client/parsers/validators/pattern-spec.js',
