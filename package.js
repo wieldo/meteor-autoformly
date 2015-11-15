@@ -1,6 +1,5 @@
 var both = ['client', 'server'];
 var client = 'client';
-var server = 'server';
 
 Package.describe({
     name: "wieldo:autoformly",

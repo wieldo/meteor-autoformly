@@ -10,6 +10,8 @@
     "es6": true
   },
   "globals": {
+    // app globals
+    "autoFormlyHelpers": true,
     // thrid-party packages globals
     "SimpleSchema": false,
     "angular2now": false,
