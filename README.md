@@ -1,11 +1,19 @@
 AutoFormly
 ==========
 
+[![GitHub version](https://badge.fury.io/gh/wieldo%2Fmeteor-autoformly.svg)](https://badge.fury.io/gh/wieldo%2Fmeteor-autoformly)
 [![Build Status](https://travis-ci.org/wieldo/meteor-autoformly.svg)](https://travis-ci.org/wieldo/meteor-autoformly) 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/wieldo/meteor-autoformly?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Coverage Status](https://coveralls.io/repos/wieldo/meteor-autoformly/badge.svg?branch=master&service=github)](https://coveralls.io/github/wieldo/meteor-autoformly?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/b55750daf3c6417caf63154da85a9eae)](https://www.codacy.com/app/mys-sterowiec/meteor-autoformly)
 
 Create [Angular-Formly] forms with automatic insert and update, and automatic reactive validation. Requires [SimpleSchema] or [Collection2].
+
+## Installation
+
+```
+meteor add wieldo:autoformly
+```
 
 ## How to use it
 
@@ -58,10 +66,10 @@ We're currently working on three other packages that are very useful in autoForm
 - [x] `schema.max` for **_String_** and **_Number_** types as **maxlength** and **maxnumber** validator
 - [x] `schema.min` for **_String_** and **_Number_** types as **minlength** and **minnumber** validator
 - [x] `schema.regEx` as **pattern** validator
-- [ ] `schema.defaultValue` as `model`
+- [x] `schema.defaultValue` as `formly.defaultValue`
 - [ ] `schema.autoformly.rows` to be displayed textarea
 - [ ] **_Boolean_** type as checkbox
-- [ ] `schema.autoformly.type` to be `formly.type`
+- [x] `schema.autoformly.type` to be `formly.type`
 - [ ] `schema.allowedValues` as select element
 - [ ] `schema.minCount` support
 - [ ] `schema.maxCount` support

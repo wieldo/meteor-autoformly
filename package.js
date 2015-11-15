@@ -1,11 +1,10 @@
 var both = ['client', 'server'];
 var client = 'client';
-var server = 'server';
 
 Package.describe({
     name: "wieldo:autoformly",
     summary: "Create angular-formly forms with automatic insert and update, and automatic reactive validation.",
-    version: "0.0.1",
+    version: "0.1.0",
 
     documentation: 'README.md',
     git: 'https://github.com/wieldo/meteor-autoformly.git'
@@ -26,6 +25,8 @@ Package.onUse(function (api) {
             'wieldo:angular-formly-validator@1.0.0'
         ],
         imply: [
+            'pbastowski:angular-babel',
+            'pbastowski:angular2-now',
             'aldeed:simple-schema',
             'aldeed:collection2',
             'wieldo:angular-formly-validator'
@@ -47,6 +48,7 @@ Package.onUse(function (api) {
         'lib/client/parsers/key.js',
         'lib/client/parsers/type.js',
         'lib/client/parsers/templateoptions-label.js',
+        'lib/client/parsers/defaultvalue.js',
         // validators
         'lib/client/parsers/validators/required.js',
         'lib/client/parsers/validators/minlength.js',
@@ -64,14 +66,10 @@ Package.onUse(function (api) {
 
 Package.onTest(function(api) {
     api.use([
-        'pbastowski:angular-babel@1.0.2',
-        'pbastowski:angular2-now@0.3.13',
-        'underscore@1.0.4',
         'sanjo:jasmine@0.20.2',
         'velocity:helpers',
         'velocity:console-reporter',
         'angular:angular-mocks@1.4.7',
-        'aldeed:simple-schema@1.1.0',
         'wieldo:autoformly'
     ]);
     
@@ -86,6 +84,7 @@ Package.onTest(function(api) {
         'tests/client/parsers/key-spec.js',
         'tests/client/parsers/templateoptions-label-spec.js',
         'tests/client/parsers/type-spec.js',
+        'tests/client/parsers/defaultvalue-spec.js',
         // parsers validators
         'tests/client/parsers/validators/required-spec.js',
         'tests/client/parsers/validators/pattern-spec.js',
