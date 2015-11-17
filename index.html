@@ -20,10 +20,21 @@
 
     <section class="main-content">
       <h1>
-<a id="autoformly--" class="anchor" href="#autoformly--" aria-hidden="true"><span class="octicon octicon-link"></span></a>AutoFormly <a href="https://travis-ci.org/wieldo/meteor-autoformly"><img src="https://travis-ci.org/wieldo/meteor-autoformly.svg" alt="Build Status"></a> <a href="https://gitter.im/wieldo/meteor-autoformly?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter"></a>
-</h1>
+<a id="autoformly" class="anchor" href="#autoformly" aria-hidden="true"><span class="octicon octicon-link"></span></a>AutoFormly</h1>
+
+<p><a href="https://badge.fury.io/gh/wieldo%2Fmeteor-autoformly"><img src="https://badge.fury.io/gh/wieldo%2Fmeteor-autoformly.svg" alt="GitHub version"></a>
+<a href="https://travis-ci.org/wieldo/meteor-autoformly"><img src="https://travis-ci.org/wieldo/meteor-autoformly.svg" alt="Build Status"></a> 
+<a href="https://gitter.im/wieldo/meteor-autoformly?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter"></a>
+<a href="https://coveralls.io/github/wieldo/meteor-autoformly?branch=master"><img src="https://coveralls.io/repos/wieldo/meteor-autoformly/badge.svg?branch=master&amp;service=github" alt="Coverage Status"></a>
+<a href="https://www.codacy.com/app/mys-sterowiec/meteor-autoformly"><img src="https://api.codacy.com/project/badge/grade/b55750daf3c6417caf63154da85a9eae" alt="Codacy Badge"></a></p>
 
 <p>Create <a href="http://angular-formly.com">Angular-Formly</a> forms with automatic insert and update, and automatic reactive validation. Requires <a href="http://github.com/aldeed/meteor-simple-schema">SimpleSchema</a> or <a href="http://github.com/aldeed/meteor-collection2">Collection2</a>.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<pre><code>meteor add wieldo:autoformly
+</code></pre>
 
 <h2>
 <a id="how-to-use-it" class="anchor" href="#how-to-use-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use it</h2>
@@ -43,7 +54,7 @@
 </ul>
 
 <h2>
-<a id="contribution" class="anchor" href="#contribution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribution</h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
 
 <p>It is a new project, at the beginning of development process.</p>
 
@@ -82,6 +93,34 @@ If <em>opional</em> is not set to <em>true</em> then we're adding <code>required
 <a href="http://github.com/wieldo/angular-formly-validator">formlyValidator</a> to make validation easier (with built-in validators)</li>
 <li>
 <a href="http://github.com/wieldo/angular-formly-templates-material">formlyMaterial</a> is a AngularJS module with Angular Material templates to use in angular-formly.</li>
+</ul>
+
+<h3>
+<a id="roadmap-10" class="anchor" href="#roadmap-10" aria-hidden="true"><span class="octicon octicon-link"></span></a>Roadmap 1.0</h3>
+
+<ul>
+<li>[x] Extend SimpleSchema to use <code>autoformly</code> property</li>
+<li>[ ] Support for <strong><em>array of objects</em></strong>
+</li>
+<li>[x] <code>schema.key</code> as <code>formly.key</code>
+</li>
+<li>[x] <code>schema.label</code> as <code>formly.templateOptions.label</code>
+</li>
+<li>[x] <code>schema.optional</code> and required validator</li>
+<li>[x] <code>schema.max</code> for <strong><em>String</em></strong> and <strong><em>Number</em></strong> types as <strong>maxlength</strong> and <strong>maxnumber</strong> validator</li>
+<li>[x] <code>schema.min</code> for <strong><em>String</em></strong> and <strong><em>Number</em></strong> types as <strong>minlength</strong> and <strong>minnumber</strong> validator</li>
+<li>[x] <code>schema.regEx</code> as <strong>pattern</strong> validator</li>
+<li>[x] <code>schema.defaultValue</code> as <code>formly.defaultValue</code>
+</li>
+<li>[ ] <code>schema.autoformly.rows</code> to be displayed textarea</li>
+<li>[ ] <strong><em>Boolean</em></strong> type as checkbox</li>
+<li>[x] <code>schema.autoformly.type</code> to be <code>formly.type</code>
+</li>
+<li>[ ] <code>schema.allowedValues</code> as select element</li>
+<li>[ ] <code>schema.minCount</code> support</li>
+<li>[ ] <code>schema.maxCount</code> support</li>
+<li>[ ] Support for <strong><em>Object</em></strong> type fields</li>
+<li>[ ] Support for server-side validation errors (like <em>unique</em>)</li>
 </ul>
 
 <h2>
