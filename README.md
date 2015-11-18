@@ -68,13 +68,14 @@ We're currently working on three other packages that are very useful in autoForm
 - [x] `schema.regEx` as **pattern** validator
 - [x] `schema.defaultValue` as `formly.defaultValue`
 - [ ] `schema.autoformly.rows` to be displayed textarea
-- [ ] **_Boolean_** type as checkbox
+- [x] **_Boolean_** type as checkbox
 - [x] `schema.autoformly.type` to be `formly.type`
-- [ ] `schema.allowedValues` as select element
+- [x] `schema.allowedValues` as select element (schema type is a String) 
 - [ ] `schema.minCount` support
 - [ ] `schema.maxCount` support
 - [ ] Support for **_Object_** type fields
 - [ ] Support for server-side validation errors (like _unique_)
+- [ ] Interactive **demo**
 
 ## Contact
 You can find me on [Gitter].
