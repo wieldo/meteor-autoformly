@@ -4,7 +4,7 @@ var client = 'client';
 Package.describe({
     name: "wieldo:autoformly",
     summary: "Create angular-formly forms with automatic insert and update, and automatic reactive validation.",
-    version: "0.1.0",
+    version: "0.2.0",
 
     documentation: 'README.md',
     git: 'https://github.com/wieldo/meteor-autoformly.git'
@@ -22,6 +22,7 @@ Package.onUse(function (api) {
             'angular:angular@1.4.7',
             'pbastowski:angular-babel@1.0.2',
             'pbastowski:angular2-now@0.3.13',
+            'wieldo:angular-formly@7.3.2',
             'wieldo:angular-formly-validator@1.0.0'
         ],
         imply: [
@@ -29,6 +30,7 @@ Package.onUse(function (api) {
             'pbastowski:angular2-now',
             'aldeed:simple-schema',
             'aldeed:collection2',
+            'wieldo:angular-formly',
             'wieldo:angular-formly-validator'
         ]
     };
