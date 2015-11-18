@@ -70,7 +70,7 @@ We're currently working on three other packages that are very useful in autoForm
 - [ ] `schema.autoformly.rows` to be displayed textarea
 - [x] **_Boolean_** type as checkbox
 - [x] `schema.autoformly.type` to be `formly.type`
-- [ ] `schema.allowedValues` as select element
+- [x] `schema.allowedValues` as select element (schema type is a String) 
 - [ ] `schema.minCount` support
 - [ ] `schema.maxCount` support
 - [ ] Support for **_Object_** type fields
