@@ -48,6 +48,7 @@ Package.onUse(function (api) {
         'lib/client/parsers/key.js',
         'lib/client/parsers/type.js',
         'lib/client/parsers/templateoptions-label.js',
+        'lib/client/parsers/templateoptions-options.js',
         'lib/client/parsers/defaultvalue.js',
         // validators
         'lib/client/parsers/validators/required.js',
