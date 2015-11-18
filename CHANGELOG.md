@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - Support for **_Boolean_** type (as checkbox)
+- Support for allowedValues with **_String_** type (as select)
 
 ## [0.1.0] 2015-11-15
 ### Added
