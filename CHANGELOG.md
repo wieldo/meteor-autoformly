@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Support autoformly.validation.messages in SimpleSchema
 - Add optional manual formly configuration for each field in autoFormly service
+- Implement more advanced filtering
+- `schema.autoformly.templateOptions.rows` to be displayed as textarea
+
+### Deprecated
+- Filtering using schema keys as array  
 
 ### Fixed
 - Prevent templatesObject.label overwriting

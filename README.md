@@ -17,10 +17,50 @@ meteor add wieldo:autoformly
 
 ## How to use it
 
+
+### Convert all schema fields
+
 ```javascript
 const fields = autoFormly.collection(BooksCollection);
 // or
 const fields = autoFormly.schema(BooksSchema);
+```
+
+### Convert all schema fields excluding one
+```javascript
+const fields = autoFormly.schema(BooksSchema, {
+    fields: {
+        published: false
+    }
+});
+```
+
+### Convert selected schema fields
+```javascript
+const fields = autoFormly.schema(BooksSchema, {
+    all: false,
+    fields: {
+        published: true,
+        author: true,
+        title: true
+    }
+});
+```
+
+### Extend formly configuration for selected field
+
+```javascript
+const fields = autoFormly.schema(BooksSchema, {
+    all: false,
+    fields: {
+        published: true,
+        author: {
+            templateOptions: {
+                label: "Written by"
+            }
+        }
+    }
+});
 ```
 
 ## What is ready?
@@ -59,7 +99,8 @@ We're currently working on three other packages that are very useful in autoForm
 ### Roadmap 1.0
 
 - [x] Extend SimpleSchema to use `autoformly` property
-- [ ] Support for **_array of objects_**
+- [x] Add optional manual formly configuration for each field
+- [x] More advanced field filtering (show all / hide all / add excluding)
 - [x] `schema.key` as `formly.key`
 - [x] `schema.label` as `formly.templateOptions.label`
 - [x] `schema.optional` and required validator
@@ -67,12 +108,12 @@ We're currently working on three other packages that are very useful in autoForm
 - [x] `schema.min` for **_String_** and **_Number_** types as **minlength** and **minnumber** validator
 - [x] `schema.regEx` as **pattern** validator
 - [x] `schema.defaultValue` as `formly.defaultValue`
-- [ ] `schema.autoformly.rows` to be displayed textarea
+- [x] `schema.autoformly.templateOptions.rows` to be displayed as textarea
 - [x] **_Boolean_** type as checkbox
 - [x] `schema.autoformly.type` to be `formly.type`
 - [x] `schema.allowedValues` as select element (schema type is a String) 
-- [ ] `schema.minCount` support
-- [ ] `schema.maxCount` support
+- [ ] `schema.minCount` and `schema.maxCount` support
+- [ ] Support for **_array of objects_**
 - [ ] Support for **_Object_** type fields
 - [ ] Support for server-side validation errors (like _unique_)
 - [ ] Interactive **demo**
