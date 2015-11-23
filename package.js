@@ -52,6 +52,8 @@ Package.onUse(function (api) {
         'lib/client/parsers/templateoptions-label.js',
         'lib/client/parsers/templateoptions-options.js',
         'lib/client/parsers/defaultvalue.js',
+        // validation
+        'lib/client/parsers/validation/messages.js',
         // validators
         'lib/client/parsers/validators/required.js',
         'lib/client/parsers/validators/minlength.js',
@@ -88,6 +90,8 @@ Package.onTest(function(api) {
         'tests/client/parsers/templateoptions-label-spec.js',
         'tests/client/parsers/type-spec.js',
         'tests/client/parsers/defaultvalue-spec.js',
+        // parsers validation
+        'tests/client/parsers/validation/messages-spec.js',
         // parsers validators
         'tests/client/parsers/validators/required-spec.js',
         'tests/client/parsers/validators/pattern-spec.js',
