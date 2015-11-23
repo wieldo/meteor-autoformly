@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - Support autoformly.validation.messages in SimpleSchema
+- Add optional manual formly configuration for each field in autoFormly service
+
+### Fixed
+- Prevent templatesObject.label overwriting
 
 ## [0.2.1] - 2015-11-18
 ### Changed
