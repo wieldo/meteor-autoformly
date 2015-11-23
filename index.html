@@ -39,9 +39,48 @@
 <h2>
 <a id="how-to-use-it" class="anchor" href="#how-to-use-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use it</h2>
 
+<h3>
+<a id="convert-all-schema-fields" class="anchor" href="#convert-all-schema-fields" aria-hidden="true"><span class="octicon octicon-link"></span></a>Convert all schema fields</h3>
+
 <div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">fields</span> <span class="pl-k">=</span> autoFormly.collection(BooksCollection);
 <span class="pl-c">// or</span>
 <span class="pl-k">const</span> <span class="pl-c1">fields</span> <span class="pl-k">=</span> autoFormly.schema(BooksSchema);</pre></div>
+
+<h3>
+<a id="convert-all-schema-fields-excluding-one" class="anchor" href="#convert-all-schema-fields-excluding-one" aria-hidden="true"><span class="octicon octicon-link"></span></a>Convert all schema fields excluding one</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">fields</span> <span class="pl-k">=</span> autoFormly.schema(BooksSchema, {
+    fields<span class="pl-k">:</span> {
+        published<span class="pl-k">:</span> <span class="pl-c1">false</span>
+    }
+});</pre></div>
+
+<h3>
+<a id="convert-selected-schema-fields" class="anchor" href="#convert-selected-schema-fields" aria-hidden="true"><span class="octicon octicon-link"></span></a>Convert selected schema fields</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">fields</span> <span class="pl-k">=</span> autoFormly.schema(BooksSchema, {
+    all<span class="pl-k">:</span> <span class="pl-c1">false</span>,
+    fields<span class="pl-k">:</span> {
+        published<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        author<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        title<span class="pl-k">:</span> <span class="pl-c1">true</span>
+    }
+});</pre></div>
+
+<h3>
+<a id="extend-formly-configuration-for-selected-field" class="anchor" href="#extend-formly-configuration-for-selected-field" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extend formly configuration for selected field</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">fields</span> <span class="pl-k">=</span> autoFormly.schema(BooksSchema, {
+    all<span class="pl-k">:</span> <span class="pl-c1">false</span>,
+    fields<span class="pl-k">:</span> {
+        published<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        author<span class="pl-k">:</span> {
+            templateOptions<span class="pl-k">:</span> {
+                label<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Written by<span class="pl-pds">"</span></span>
+            }
+        }
+    }
+});</pre></div>
 
 <h2>
 <a id="what-is-ready" class="anchor" href="#what-is-ready" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is ready?</h2>
@@ -100,8 +139,8 @@ If <em>opional</em> is not set to <em>true</em> then we're adding <code>required
 
 <ul>
 <li>[x] Extend SimpleSchema to use <code>autoformly</code> property</li>
-<li>[ ] Support for <strong><em>array of objects</em></strong>
-</li>
+<li>[x] Add optional manual formly configuration for each field</li>
+<li>[x] More advanced field filtering (show all / hide all / add excluding)</li>
 <li>[x] <code>schema.key</code> as <code>formly.key</code>
 </li>
 <li>[x] <code>schema.label</code> as <code>formly.templateOptions.label</code>
@@ -112,13 +151,14 @@ If <em>opional</em> is not set to <em>true</em> then we're adding <code>required
 <li>[x] <code>schema.regEx</code> as <strong>pattern</strong> validator</li>
 <li>[x] <code>schema.defaultValue</code> as <code>formly.defaultValue</code>
 </li>
-<li>[ ] <code>schema.autoformly.rows</code> to be displayed textarea</li>
+<li>[x] <code>schema.autoformly.templateOptions.rows</code> to be displayed as textarea</li>
 <li>[x] <strong><em>Boolean</em></strong> type as checkbox</li>
 <li>[x] <code>schema.autoformly.type</code> to be <code>formly.type</code>
 </li>
 <li>[x] <code>schema.allowedValues</code> as select element (schema type is a String) </li>
-<li>[ ] <code>schema.minCount</code> support</li>
-<li>[ ] <code>schema.maxCount</code> support</li>
+<li>[ ] <code>schema.minCount</code> and <code>schema.maxCount</code> support</li>
+<li>[ ] Support for <strong><em>array of objects</em></strong>
+</li>
 <li>[ ] Support for <strong><em>Object</em></strong> type fields</li>
 <li>[ ] Support for server-side validation errors (like <em>unique</em>)</li>
 <li>[ ] Interactive <strong>demo</strong>
