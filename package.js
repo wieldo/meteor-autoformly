@@ -46,6 +46,8 @@ Package.onUse(function (api) {
         'lib/client/auto-formly-helpers.js',
         'lib/client/auto-formly-parsers.js',
         'lib/client/auto-formly.js',
+        'lib/client/auto-formly-component.ng.html',
+        'lib/client/auto-formly-component.js',
         // parsers
         'lib/client/parsers/key.js',
         'lib/client/parsers/type.js',
@@ -66,10 +68,10 @@ Package.onUse(function (api) {
     api.addFiles([
         'lib/schema.js'
     ], both);
-    
+
 });
 
-Package.onTest(function(api) {
+Package.onTest(function (api) {
     api.use([
         'underscore',
         'sanjo:jasmine@0.20.2',
@@ -78,7 +80,7 @@ Package.onTest(function(api) {
         'angular:angular-mocks@1.4.7',
         'wieldo:autoformly'
     ]);
-    
+
     api.addFiles([
         'tests/client/schema.js'
     ], both);
