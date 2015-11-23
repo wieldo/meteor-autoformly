@@ -17,9 +17,9 @@ Parse Mongo.Collection to get array with fields
 
 __Arguments__
 
-* __collection__ *{Collection}*  
+* __collection__ *{CollectionCollection|AngularMeteorCollection}*   
 
- Mongo Collection
+ Mongo Collection used directly or with $meteor AngularJS service
  
 * __options__ *{array|object|undefined}*
 
