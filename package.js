@@ -4,7 +4,7 @@ var client = 'client';
 Package.describe({
     name: "wieldo:autoformly",
     summary: "Create angular-formly forms with automatic insert and update, and automatic reactive validation.",
-    version: "0.2.1",
+    version: "0.3.0",
 
     documentation: 'README.md',
     git: 'https://github.com/wieldo/meteor-autoformly.git'
@@ -52,6 +52,8 @@ Package.onUse(function (api) {
         'lib/client/parsers/templateoptions-label.js',
         'lib/client/parsers/templateoptions-options.js',
         'lib/client/parsers/defaultvalue.js',
+        // validation
+        'lib/client/parsers/validation/messages.js',
         // validators
         'lib/client/parsers/validators/required.js',
         'lib/client/parsers/validators/minlength.js',
@@ -69,6 +71,7 @@ Package.onUse(function (api) {
 
 Package.onTest(function(api) {
     api.use([
+        'underscore',
         'sanjo:jasmine@0.20.2',
         'velocity:helpers',
         'velocity:console-reporter',
@@ -88,6 +91,8 @@ Package.onTest(function(api) {
         'tests/client/parsers/templateoptions-label-spec.js',
         'tests/client/parsers/type-spec.js',
         'tests/client/parsers/defaultvalue-spec.js',
+        // parsers validation
+        'tests/client/parsers/validation/messages-spec.js',
         // parsers validators
         'tests/client/parsers/validators/required-spec.js',
         'tests/client/parsers/validators/pattern-spec.js',

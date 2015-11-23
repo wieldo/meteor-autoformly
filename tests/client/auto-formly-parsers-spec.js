@@ -84,6 +84,25 @@ describe('autoFormlyParser', () => {
             expect(autoFormlyParser.field("parent.$")).toBeUndefined();
         });
 
+        it("should extend formly field based on schema's autoformly property", () => {
+            const fieldKey = "test";
+            const fieldSchema = {
+                name: "test",
+                autoformly: {
+                    type: "test"
+                }
+            };
+            emptyParsers();
+            autoFormlyParser.register((fKey, fSchema, fFormly) => {
+                fFormly.key = fSchema.name;
+            });
+
+            expect(autoFormlyParser.field(fieldKey, fieldSchema)).toEqual({
+                key: "test",
+                type: "test"
+            });
+        });
+
         it('should run parsers', () => {
             const fieldKey = "test";
             const fieldSchema = {
