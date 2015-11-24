@@ -23,6 +23,8 @@ meteor add wieldo:autoformly
 ```javascript
 const fields = autoFormly.collection(BooksCollection);
 // or
+const fields = autoFormly.collection($meteor.collection(BooksCollection);
+// or
 const fields = autoFormly.schema(BooksSchema);
 ```
 
@@ -35,9 +37,9 @@ const fields = autoFormly.schema(BooksSchema, {
 });
 ```
 
-### Convert selected schema fields
+### Convert selected collection fields
 ```javascript
-const fields = autoFormly.schema(BooksSchema, {
+const fields = autoFormly.collection(BooksCollection, {
     all: false,
     fields: {
         published: true,
