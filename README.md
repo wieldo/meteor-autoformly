@@ -28,6 +28,21 @@ const fields = autoFormly.collection($meteor.collection(BooksCollection);
 const fields = autoFormly.schema(BooksSchema);
 ```
 
+### Save object to collection with validation error handling
+
+```javascript
+const fields = autoFormly.collection(BooksCollection);
+
+function submit(book) {
+    $meteor.collection(BooksCollection)
+        .save(book)
+        .then(() => {
+            // success
+        })
+        .catch(() => autoFormly.errors(BooksCollection, fields);
+}
+```
+
 ### Convert all schema fields excluding one
 ```javascript
 const fields = autoFormly.schema(BooksSchema, {
@@ -66,6 +81,12 @@ const fields = autoFormly.schema(BooksSchema, {
 ```
 
 ## What is ready?
+
+See examples above.
+
+- creating formly fields with validators using collection or schema (autoFormly.collection(), autoFormly.schema())
+- handling validation errors (autoFormly.error() sets validation on form fields)
+
 Take a look at this docs:
 
 - [autoFormly]
@@ -117,7 +138,7 @@ We're currently working on three other packages that are very useful in autoForm
 - [ ] `schema.minCount` and `schema.maxCount` support
 - [ ] Support for **_array of objects_**
 - [ ] Support for **_Object_** type fields
-- [ ] Support for server-side validation errors (like _unique_)
+- [x] Support for server-side validation errors (like _unique_)
 - [ ] Interactive **demo**
 
 ## Contact
