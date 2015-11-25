@@ -47,6 +47,7 @@
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">auto</span><span class="pl-e">-formly</span>
     <span class="pl-e">collection</span>=<span class="pl-s"><span class="pl-pds">"</span>vm.booksCollection<span class="pl-pds">"</span></span>
     <span class="pl-e">doc</span>=<span class="pl-s"><span class="pl-pds">"</span>vm.book<span class="pl-pds">"</span></span>
+    <span class="pl-e">options</span>=<span class="pl-s"><span class="pl-pds">"</span>vm.options<span class="pl-pds">"</span></span>
     <span class="pl-e">on-success</span>=<span class="pl-s"><span class="pl-pds">"</span>vm.onSuccess<span class="pl-pds">"</span></span>
     <span class="pl-e">on-error</span>=<span class="pl-s"><span class="pl-pds">"</span>vm.onError<span class="pl-pds">"</span></span>&gt;
     &lt;<span class="pl-ent">button</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>submit<span class="pl-pds">"</span></span>&gt;Update&lt;/<span class="pl-ent">button</span>&gt;
@@ -58,9 +59,11 @@
 <li>
 <strong>doc</strong> document from collection (optional)</li>
 <li>
-<strong>onSuccess</strong> callback with result of action as argument</li>
+<strong>options</strong> same object as in autoFormly.collection (to custom configuration and filtering) (optional)</li>
 <li>
-<strong>onError</strong> callback with error as argument (false if form contains errors on client-side)</li>
+<strong>onSuccess</strong> callback with result of action as argument (optional)</li>
+<li>
+<strong>onError</strong> callback with error as argument (false if form contains errors on client-side) (optional)</li>
 </ul>
 
 <h3>
@@ -129,7 +132,7 @@
 
 <ul>
 <li>creating formly fields with validators using collection or schema (autoFormly.collection(), autoFormly.schema())</li>
-<li>handling validation errors (autoFormly.error() sets validation on form fields)</li>
+<li>handling validation errors (autoFormly.errors() sets validation on form fields)</li>
 </ul>
 
 <p>Take a look at this docs:</p>
