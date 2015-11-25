@@ -4,6 +4,7 @@ describe('autoFormly', () => {
     //
 
     let autoFormly;
+    let $meteor;
 
     //
     // helpers
@@ -13,15 +14,56 @@ describe('autoFormly', () => {
         return "undefined" !== typeof _.find(fields, (field) => field.key === key)
     }
 
+    function collectionFail(values, message) {
+        if (!angular.isArray(values)) {
+            values = [values];
+        }
+        values.forEach((value) => {
+            expect(() => {
+                autoFormly.collection(value);
+            }).toThrowError(Error, `[AutoFormly] ${message}`);
+        });
+    }
+
+    function collectionPass(values) {
+        if (!angular.isArray(values)) {
+            values = [values];
+        }
+        values.forEach((value) => {
+            expect(() => {
+                autoFormly.collection(value);
+            }).not.toThrowError();
+        });
+    }
+
     //
     // tests
     //
 
     beforeEach(() => {
+        module('angular-meteor');
         module('autoFormly');
 
-        inject(function (_autoFormly_) {
+        inject(function (_autoFormly_, _$meteor_) {
             autoFormly = _autoFormly_;
+            $meteor = _$meteor_;
+        });
+    });
+
+    describe("collection()", () => {
+        it("should fail on non collection2 objects", () => {
+            const values = [undefined, null, false, true, "", {}, "asd", 0, 1, -1];
+            values.push(() => {
+            });
+            collectionFail(values, "Collection is not extended by Collection2");
+        });
+        
+        it("should fail on collection not extended by Collection2", () => {
+            collectionFail([CollectionFAIL, $meteor.collection(CollectionFAIL)], "Collection is not extended by Collection2");
+        });
+
+        it("should pass collection extended by Collection2", () => {
+            collectionPass([CollectionOK, $meteor.collection(CollectionOK)]);
         });
     });
 
@@ -115,7 +157,7 @@ describe('autoFormly', () => {
             expect(fieldExist('username', fields)).toBeTruthy();
             expect(fieldExist('createdAt', fields)).toBeFalsy();
         });
-        
+
         it('should fail on non SimpleSchema objects', () => {
             const values = ["s", "", 0, 1, true, false, undefined, null, {}, () => {
             }];
