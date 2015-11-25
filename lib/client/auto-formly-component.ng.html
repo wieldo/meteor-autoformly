@@ -1,0 +1,5 @@
+<form ng-submit="vm.submit()" name="{{vm.formName}}">
+    <formly-form fields="vm.formFields" model="vm.formModel" form="::vm.form" options="vm.formOptions">
+        <ng-transclude></ng-transclude>
+    </formly-form>
+</form>
