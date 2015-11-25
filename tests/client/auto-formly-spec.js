@@ -215,17 +215,17 @@ describe('autoFormly', () => {
                     }
                 }
             };
-            const error = {name: fieldMock.key, type: "minlength"};
+            const error = {name: fieldMock.key, type: "minString"};
 
             CollectionOKMock.simpleSchema()
                 .namedContext()
                 .addInvalidKeys([error]);
 
-            it("should set validity", () => {
+            it("should set validity and properly transform error type", () => {
                 spyOn(fieldMock.formControl, '$setValidity');
                 autoFormly.errors(CollectionOKMock, [fieldMock]);
 
-                expect(fieldMock.formControl.$setValidity).toHaveBeenCalledWith(error.type, false);
+                expect(fieldMock.formControl.$setValidity).toHaveBeenCalledWith("minlength", false);
             });
 
             it("should fail on field without formControl", () => {
