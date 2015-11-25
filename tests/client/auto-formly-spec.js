@@ -57,7 +57,7 @@ describe('autoFormly', () => {
             });
             collectionFail(values, "Collection is not extended by Collection2");
         });
-        
+
         it("should fail on collection not extended by Collection2", () => {
             collectionFail([CollectionFAIL, $meteor.collection(CollectionFAIL)], "Collection is not extended by Collection2");
         });
@@ -166,6 +166,75 @@ describe('autoFormly', () => {
                 expect(() => {
                     autoFormly.schema(val);
                 }).toThrowError(Error, "[AutoFormly] Schema has to be instance of SimpleSchema");
+            });
+        });
+    });
+
+    describe("errors()", () => {
+
+        it("should fail on missing fields", () => {
+            expect(() => {
+                autoFormly.errors(CollectionOK);
+            }).toThrowError(Error, "[AutoFormly] Missing or invalid fields");
+        });
+
+        it("should fail on invalid fields", () => {
+            const fields = [{}, null, true, ""];
+            fields.forEach((field) => {
+                expect(() => {
+                    autoFormly.errors(CollectionOK, field);
+                }).toThrowError(Error, "[AutoFormly] Missing or invalid fields");
+            });
+        });
+
+        it("should fail on missing collection", () => {
+            expect(() => {
+                autoFormly.errors(undefined, []);
+            }).toThrowError(Error, "[AutoFormly] Collection is not extended by Collection2");
+        });
+
+        it("should fail on invalid collection", () => {
+            expect(() => {
+                autoFormly.errors(CollectionFAIL, []);
+            }).toThrowError(Error, "[AutoFormly] Collection is not extended by Collection2");
+        });
+
+        it("should pass on valid collection and fields", () => {
+            expect(() => {
+                autoFormly.errors(CollectionOK, []);
+            }).not.toThrowError();
+        });
+
+        describe("with collection errors", () => {
+            const CollectionOKMock = angular.copy(CollectionOK);
+            const fieldMock = {
+                key: 'profile.firstname',
+                formControl: {
+                    $setValidity() {
+
+                    }
+                }
+            };
+            const error = {name: fieldMock.key, type: "minlength"};
+
+            CollectionOKMock.simpleSchema()
+                .namedContext()
+                .addInvalidKeys([error]);
+
+            it("should set validity", () => {
+                spyOn(fieldMock.formControl, '$setValidity');
+                autoFormly.errors(CollectionOKMock, [fieldMock]);
+
+                expect(fieldMock.formControl.$setValidity).toHaveBeenCalledWith(error.type, false);
+            });
+
+            it("should fail on field without formControl", () => {
+                spyOn(fieldMock.formControl, '$setValidity');
+
+                expect(() => {
+                    autoFormly.errors(CollectionOKMock, [{key: fieldMock.key}]);
+                }).toThrowError(Error, `[AutoFormly] Field "${fieldMock.key}" has no formControl`);
+                expect(fieldMock.formControl.$setValidity).not.toHaveBeenCalled();
             });
         });
     });
