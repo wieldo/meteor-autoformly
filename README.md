@@ -17,6 +17,23 @@ meteor add wieldo:autoformly
 
 ## How to use it
 
+### auto-formly component
+
+To insert or update collection
+```html
+<auto-formly
+    collection="vm.booksCollection"
+    doc="vm.book"
+    on-success="vm.onSuccess"
+    on-error="vm.onError">
+    <button type="submit">Update</button>
+</auto-formly>
+```
+
+- **collection** Mongo.Collection object
+- **doc** document from collection (optional)
+- **onSuccess** callback with result of action as argument
+- **onError** callback with error as argument (false if form contains errors on client-side)
 
 ### Convert all schema fields
 
@@ -139,6 +156,7 @@ We're currently working on three other packages that are very useful in autoForm
 - [ ] Support for **_array of objects_**
 - [ ] Support for **_Object_** type fields
 - [x] Support for server-side validation errors (like _unique_)
+- [x] Component to automate process of insertion or collection update
 - [ ] Interactive **demo**
 
 ## Contact
