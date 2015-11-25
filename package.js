@@ -62,7 +62,10 @@ Package.onUse(function (api) {
         'lib/client/parsers/validators/maxlength.js',
         'lib/client/parsers/validators/minnumber.js',
         'lib/client/parsers/validators/maxnumber.js',
-        'lib/client/parsers/validators/pattern.js'
+        'lib/client/parsers/validators/pattern.js',
+        'lib/client/parsers/validators/unique.js',
+        // extend formlyValidator
+        'lib/client/formly-validator/unique.js'
     ], client);
 
     api.addFiles([
