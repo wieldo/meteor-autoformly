@@ -42,7 +42,7 @@ __Returns__  *{Array}*
  
 -
 
-### *autoFormly*.schema(schema, fields)
+### *autoFormly*.schema(schema, options)
 
 ```
 Parse SimpleSchema object to get array with fields
@@ -50,7 +50,7 @@ Parse SimpleSchema object to get array with fields
 
 __Arguments__
 
-* __collection__ *{SimpleSchema}*  
+* __schema__ *{SimpleSchema}*  
 
  SimpleSchema instance
  
@@ -61,4 +61,24 @@ __Arguments__
 __Returns__  *{Array}*
  
  Array with fields to use in formly-form.
+ 
+-
+
+### *autoFormly*.errors(collection, fields)
+
+```
+Gets errors of fields and sets them in form controls. Use it when insertion or collection update fails.
+
+See example in readme.
+```
+
+__Arguments__
+
+* __collection__ *{SimpleSchema}*  
+
+ SimpleSchema instance
+ 
+* __fields__ *{array}*
+
+ Array with fields
  
