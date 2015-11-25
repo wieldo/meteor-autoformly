@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- add info about options to autoFormly component's documentation
+
 ## [0.5.0] - 2015-11-25
 ### Added
 - `auto-formly` component to automate process of insertion or collection update
@@ -45,6 +49,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.0.1 - 2015-11-14
 
+[Unreleased]: https://github.com/wieldo/meteor-autoformly/compare/v0.5.0...HEAD
 [0.5.0]: https://github.com/wieldo/meteor-autoformly/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/wieldo/meteor-autoformly/compare/v0.3.1...v0.4.0
 [0.3.1]: https://github.com/wieldo/meteor-autoformly/compare/v0.3.0...v0.3.1

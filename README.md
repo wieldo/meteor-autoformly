@@ -24,6 +24,7 @@ To insert or update collection
 <auto-formly
     collection="vm.booksCollection"
     doc="vm.book"
+    options="vm.options"
     on-success="vm.onSuccess"
     on-error="vm.onError">
     <button type="submit">Update</button>
@@ -32,8 +33,9 @@ To insert or update collection
 
 - **collection** Mongo.Collection object
 - **doc** document from collection (optional)
-- **onSuccess** callback with result of action as argument
-- **onError** callback with error as argument (false if form contains errors on client-side)
+- **options** same object as in autoFormly.collection (to custom configuration and filtering) (optional)
+- **onSuccess** callback with result of action as argument (optional)
+- **onError** callback with error as argument (false if form contains errors on client-side) (optional)
 
 ### Convert all schema fields
 
@@ -102,7 +104,7 @@ const fields = autoFormly.schema(BooksSchema, {
 See examples above.
 
 - creating formly fields with validators using collection or schema (autoFormly.collection(), autoFormly.schema())
-- handling validation errors (autoFormly.error() sets validation on form fields)
+- handling validation errors (autoFormly.errors() sets validation on form fields)
 
 Take a look at this docs:
 
