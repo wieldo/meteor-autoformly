@@ -4,7 +4,7 @@ var client = 'client';
 Package.describe({
     name: "wieldo:autoformly",
     summary: "Create angular-formly forms with automatic insert and update, and automatic reactive validation.",
-    version: "0.5.0",
+    version: "0.5.1",
 
     documentation: 'README.md',
     git: 'https://github.com/wieldo/meteor-autoformly.git'
