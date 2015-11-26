@@ -23,7 +23,7 @@ Package.onUse(function (api) {
             'pbastowski:angular-babel@1.0.2',
             'pbastowski:angular2-now@0.3.13',
             'wieldo:angular-formly@7.3.2',
-            'wieldo:angular-formly-validator@1.0.0'
+            'wieldo:angular-formly-validator@1.4.0'
         ],
         imply: [
             'pbastowski:angular-babel',
@@ -64,6 +64,7 @@ Package.onUse(function (api) {
         'lib/client/parsers/validators/maxnumber.js',
         'lib/client/parsers/validators/pattern.js',
         'lib/client/parsers/validators/unique.js',
+        'lib/client/parsers/validators/allowed.js',
         // extend formlyValidator
         'lib/client/formly-validator/unique.js'
     ], client);
