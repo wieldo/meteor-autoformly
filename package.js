@@ -106,6 +106,7 @@ Package.onTest(function (api) {
         'tests/client/parsers/validators/minnumber-spec.js',
         'tests/client/parsers/validators/maxnumber-spec.js',
         'tests/client/parsers/validators/minlength-spec.js',
-        'tests/client/parsers/validators/maxlength-spec.js'
+        'tests/client/parsers/validators/maxlength-spec.js',
+        'tests/client/parsers/validators/unique-spec.js'
     ], client);
 });
