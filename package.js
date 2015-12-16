@@ -22,10 +22,12 @@ Package.onUse(function (api) {
             'angular:angular@1.4.7',
             'pbastowski:angular-babel@1.0.2',
             'pbastowski:angular2-now@0.3.13',
+            'mys:angular-template-url@0.0.1',
             'wieldo:angular-formly@7.3.2',
             'wieldo:angular-formly-validator@1.4.0'
         ],
         imply: [
+            'mys:angular-template-url',
             'pbastowski:angular-babel',
             'pbastowski:angular2-now',
             'aldeed:simple-schema',
