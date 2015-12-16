@@ -153,7 +153,8 @@ We're currently working on three other packages that are very useful in autoForm
 - [x] `schema.autoformly.templateOptions.rows` to be displayed as textarea
 - [x] **_Boolean_** type as checkbox
 - [x] `schema.autoformly.type` to be `formly.type`
-- [x] `schema.allowedValues` as select element (schema type is a String) 
+- [x] `schema.allowedValues` as select element (schema type is a String)
+- [x] validation for `schema.allowedValues`
 - [ ] `schema.minCount` and `schema.maxCount` support
 - [ ] Support for **_array of objects_**
 - [ ] Support for **_Object_** type fields

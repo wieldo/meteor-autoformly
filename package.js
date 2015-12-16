@@ -22,15 +22,17 @@ Package.onUse(function (api) {
             'angular:angular@1.4.7',
             'pbastowski:angular-babel@1.0.2',
             'pbastowski:angular2-now@0.3.13',
-            'wieldo:angular-formly@7.3.2',
-            'wieldo:angular-formly-validator@1.0.0'
+            'mys:angular-template-url@0.0.1',
+            'formly:angular-formly@7.3.9_3',
+            'wieldo:angular-formly-validator@1.4.0'
         ],
         imply: [
+            'mys:angular-template-url',
             'pbastowski:angular-babel',
             'pbastowski:angular2-now',
             'aldeed:simple-schema',
             'aldeed:collection2',
-            'wieldo:angular-formly',
+            'formly:angular-formly',
             'wieldo:angular-formly-validator'
         ]
     };
@@ -64,6 +66,7 @@ Package.onUse(function (api) {
         'lib/client/parsers/validators/maxnumber.js',
         'lib/client/parsers/validators/pattern.js',
         'lib/client/parsers/validators/unique.js',
+        'lib/client/parsers/validators/allowed.js',
         // extend formlyValidator
         'lib/client/formly-validator/unique.js'
     ], client);
@@ -106,6 +109,8 @@ Package.onTest(function (api) {
         'tests/client/parsers/validators/minnumber-spec.js',
         'tests/client/parsers/validators/maxnumber-spec.js',
         'tests/client/parsers/validators/minlength-spec.js',
-        'tests/client/parsers/validators/maxlength-spec.js'
+        'tests/client/parsers/validators/maxlength-spec.js',
+        'tests/client/parsers/validators/unique-spec.js',
+        'tests/client/parsers/validators/allowed-spec.js'
     ], client);
 });
