@@ -23,7 +23,7 @@ Package.onUse(function (api) {
             'pbastowski:angular-babel@1.0.2',
             'pbastowski:angular2-now@0.3.13',
             'mys:angular-template-url@0.0.1',
-            'wieldo:angular-formly@7.3.2',
+            'formly:angular-formly@7.3.9_3',
             'wieldo:angular-formly-validator@1.4.0'
         ],
         imply: [
@@ -32,7 +32,7 @@ Package.onUse(function (api) {
             'pbastowski:angular2-now',
             'aldeed:simple-schema',
             'aldeed:collection2',
-            'wieldo:angular-formly',
+            'formly:angular-formly',
             'wieldo:angular-formly-validator'
         ]
     };
