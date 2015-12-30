@@ -3,6 +3,12 @@ Change Log
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+[Unreleased](https://github.com/wieldo/meteor-autoformly/compare/v0.6.0...HEAD)
+
+### Added
+
+-	Support for **Date** fields with **min** and **max**
+
 [0.6.0](https://github.com/wieldo/meteor-autoformly/compare/v0.5.1...v0.6.0)
 ----------------------------------------------------------------------------
 
