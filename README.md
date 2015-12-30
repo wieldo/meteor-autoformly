@@ -191,6 +191,7 @@ So basically, you can add properties to formly configuration by checking field's
 -	[x] `schema.allowedValues` as select element (schema type is a String)
 -	[x] validation for `schema.allowedValues`
 -	[ ] `schema.minCount` and `schema.maxCount` support
+-	[x] Support for ***Date*** type fields with min and max
 -	[ ] Support for ***array of objects***
 -	[ ] Support for ***Object*** type fields
 -	[x] Support for server-side validation errors (like *unique*\)
