@@ -25,12 +25,12 @@ describe("autoFormlyParsers type", () => {
         expect(field.type).toBe("input");
     });
 
-    it("should set input as formly field type on Date type", () => {
+    it("should set datepicker as formly field type on Date type", () => {
         const field = autoFormlyParser.field("test", {
             type: Date
         });
 
-        expect(field.type).toBe("input");
+        expect(field.type).toBe("datepicker");
     });
 
     it("should not set formly field type on Array type", () => {
