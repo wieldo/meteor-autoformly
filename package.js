@@ -56,6 +56,7 @@ Package.onUse(function (api) {
         'lib/client/parsers/template-options/label.js',
         'lib/client/parsers/template-options/options.js',
         'lib/client/parsers/template-options/min-date.js',
+        'lib/client/parsers/template-options/max-date.js',
         'lib/client/parsers/defaultvalue.js',
         // validation
         'lib/client/parsers/validation/messages.js',
