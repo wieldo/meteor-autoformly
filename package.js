@@ -53,8 +53,8 @@ Package.onUse(function (api) {
         // parsers
         'lib/client/parsers/key.js',
         'lib/client/parsers/type.js',
-        'lib/client/parsers/templateoptions-label.js',
-        'lib/client/parsers/templateoptions-options.js',
+        'lib/client/parsers/template-options/label.js',
+        'lib/client/parsers/template-options/options.js',
         'lib/client/parsers/defaultvalue.js',
         // validation
         'lib/client/parsers/validation/messages.js',
@@ -85,6 +85,7 @@ Package.onTest(function (api) {
         'velocity:helpers',
         'velocity:console-reporter',
         'angular:angular-mocks@1.4.7',
+        'pbastowski:angular-babel',
         'wieldo:autoformly'
     ]);
 
@@ -98,9 +99,9 @@ Package.onTest(function (api) {
         'tests/client/auto-formly-spec.js',
         // parsers
         'tests/client/parsers/key-spec.js',
-        'tests/client/parsers/templateoptions-label-spec.js',
         'tests/client/parsers/type-spec.js',
         'tests/client/parsers/defaultvalue-spec.js',
+        'tests/client/parsers/template-options/label-spec.js',
         // parsers validation
         'tests/client/parsers/validation/messages-spec.js',
         // parsers validators
