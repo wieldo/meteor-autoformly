@@ -6,7 +6,5 @@ before_install:
   - "npm install -g velocity-cli"
 before_script:
   - "export PATH=$HOME/.meteor:$PATH"
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
 script:
   - "velocity test-package ./ --ci"
