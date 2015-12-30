@@ -28,7 +28,6 @@ Package.onUse(function (api) {
         ],
         imply: [
             'mys:angular-template-url',
-            'pbastowski:angular-babel',
             'pbastowski:angular2-now',
             'aldeed:simple-schema',
             'aldeed:collection2',
