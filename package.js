@@ -105,6 +105,7 @@ Package.onTest(function (api) {
         'tests/client/parsers/defaultvalue-spec.js',
         'tests/client/parsers/template-options/label-spec.js',
         'tests/client/parsers/template-options/min-date-spec.js',
+        'tests/client/parsers/template-options/max-date-spec.js',
         // parsers validation
         'tests/client/parsers/validation/messages-spec.js',
         // parsers validators
