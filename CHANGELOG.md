@@ -3,6 +3,12 @@ Change Log
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+[0.8.0](https://github.com/wieldo/meteor-autoformly/compare/v0.7.0...v0.8.0) - 2016-01-18
+
+### Changed
+
+- at least wieldo:angular-formly-validator@1.5.0
+
 [0.7.0](https://github.com/wieldo/meteor-autoformly/compare/v0.6.0...v0.7.0) - 2015-12-30
 
 ### Added
