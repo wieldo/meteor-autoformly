@@ -48,7 +48,8 @@ If you found some mismatch with other templates, post an issue
 
 ### auto-formly component
 
-To insert or update collection`html
+To insert or update collection
+```html
 <auto-formly
     collection="vm.booksCollection"
     doc="vm.book"
@@ -57,7 +58,7 @@ To insert or update collection`html
     on-error="vm.onError">
     <button type="submit">Update</button>
 </auto-formly>
-`
+```
 
 -	**collection** Mongo.Collection object
 -	**doc** document from collection (optional)
@@ -169,12 +170,17 @@ For example, to mark field as required we can create the parser function to chec
 
 #### What is parser?
 
-Parser is a function that receives simpleSchema key with configuration and reference to formly field configuration object.
+Parser is a function that receives simpleSchema key with configuration and reference of formly field configuration object.
 
 So basically, you can add properties to formly configuration by checking field's schema.
 
 ### Roadmap 1.0
 
+-	[ ] Component to automate process of insertion or collection update
+-	[ ] `schema.minCount` and `schema.maxCount` support
+-	[ ] Support for ***Object*** type fields
+-	[ ] Support for ***array of objects***
+-	[ ] Interactive **demo**
 -	[x] Extend SimpleSchema to use `autoformly` property
 -	[x] Add optional manual formly configuration for each field
 -	[x] More advanced field filtering (show all / hide all / add excluding)
@@ -190,13 +196,8 @@ So basically, you can add properties to formly configuration by checking field's
 -	[x] `schema.autoformly.type` to be `formly.type`
 -	[x] `schema.allowedValues` as select element (schema type is a String)
 -	[x] validation for `schema.allowedValues`
--	[ ] `schema.minCount` and `schema.maxCount` support
 -	[x] Support for ***Date*** type fields with min and max
--	[ ] Support for ***array of objects***
--	[ ] Support for ***Object*** type fields
 -	[x] Support for server-side validation errors (like *unique*\)
--	[x] Component to automate process of insertion or collection update
--	[ ] Interactive **demo**
 
 Contact
 -------
